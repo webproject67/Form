@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Dancecolor, форма входа">
+	<meta name="description" content="Форма входа в личный кабинет для создания списков задач.">
+	<meta name="author" content="https://github.com/webproject67">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>DANCECOLOR</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+	<main class="main">
+		<nav class="main__nav">
+			<button class="main__btn" type="button" aria-label="toggle"></button>
+			<img class="main__img" src="img/svg/logo.svg" alt="Logo">
+			<ul class="main__list">
+				<li class="main__item">
+					<img class="main__image" src="img/svg/profile.svg" alt="Logo">
+					<a class="main__link" href="#">Мой профиль</a> 
+				</li>
+				<li class="main__item">
+					<img class="main__image" src="img/svg/task.svg" alt="Logo">
+					<a class="main__link" href="#">Список задач</a>
+				</li>
+				<li class="main__item">
+					<img class="main__image" src="img/svg/statistics.svg" alt="Logo">
+					<a class="main__link" href="#">Статистика</a>
+				</li>
+			</ul>
+			<button class="main__arrow" type="button" aria-label="toggle"></button>
+		</nav>
+		<section class="main__profile">
+			<p class="main__text">Мой профиль</p>
+			<form class="main__form">
+				<div class="main__wrapper">
+					<div class="main__data">
+						<label for="name">Имя</label>
+						<input class="main__name" type="text" name="name" id="name" required>
+						<label for="surname">Фамилия</label>
+						<input class="main__surname" type="text" name="surname" id="surname" required>
+					</div>
+					<div class="main__change">
+						<label for="password">Сменить пароль</label>
+						<input class="main__password" type="text" name="password" id="password">
+						<label for="login">Сменить логин</label>
+						<input class="main__login" type="text" name="login" id="login">
+					</div>
+				</div>
+				<input class="main__submit" type="submit" value="Сохранить">
+			</form>
+		</section>
+	</main>
+</body>
+</html>
