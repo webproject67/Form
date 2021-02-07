@@ -72,8 +72,15 @@
 }
 
 .main__link {
+  cursor: pointer; 
+
   &:hover {
     text-decoration: underline;
+  }
+
+  &--active {
+    text-decoration: underline;
+    cursor: default; 
   }
 }
 

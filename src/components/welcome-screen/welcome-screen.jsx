@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = (props) => {
   const onSubmitClick = (evt) => {
     evt.preventDefault();
 
+    const {onButtonClickProfile} = props;
     const login = document.querySelector("[name=login]");
     const password = document.querySelector("[name=password]");
     const form = document.querySelector(".page-main__form");
@@ -13,6 +15,8 @@ const WelcomeScreen = () => {
       form.classList.remove("page-main__error");
       void form.offsetWidth;
       form.classList.add("page-main__error");
+    } else {
+      onButtonClickProfile();
     }
   };
 
@@ -28,5 +32,9 @@ const WelcomeScreen = () => {
     </main>
   );
 } 
+
+WelcomeScreen.propTypes = {
+  onButtonClickProfile: PropTypes.func.isRequired
+}
 
 export default WelcomeScreen;
