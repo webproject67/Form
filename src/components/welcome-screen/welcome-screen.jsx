@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const WelcomeScreen = (props) => {
+  const {onButtonClickProfile} = props;
+  
   const onSubmitClick = (evt) => {
     evt.preventDefault();
 
-    const {onButtonClickProfile} = props;
     const login = document.querySelector("[name=login]");
     const password = document.querySelector("[name=password]");
     const form = document.querySelector(".page-main__form");

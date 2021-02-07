@@ -2,28 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const StatisticsScreen = (props) => {
-  const {onButtonClickProfile, onButtonClickTask} = props;
-
-  const onButtonClickMenu = () => {
-    const button = document.querySelector(".main__btn");
-    const list = document.querySelector(".main__list");
-    button.classList.toggle("main__btn--open");
-    list.classList.toggle("main__list--display");
-  }
-
-  const onButtonClickArrow = () => {
-    const button = document.querySelector(".main__arrow");
-    const nav = document.querySelector(".main__nav");
-    const list = document.querySelector(".main__list");
-    button.classList.toggle("main__arrow--close");
-    nav.classList.toggle("main__nav--width");
-    list.classList.toggle("main__list--display");
-  }
-
+  const {onButtonClickProfile, onButtonClickTask, buttonClickMenuHandler, buttonClickArrowHandler} = props;
+  
   return (
     <main className="main">
       <nav className="main__nav">
-        <button onClick={onButtonClickMenu} className="main__btn" type="button" aria-label="toggle"></button>
+        <button onClick={buttonClickMenuHandler} className="main__btn" type="button" aria-label="toggle"></button>
         <img className="main__img" src="img/svg/logo.svg" alt="Logo"/>
         <ul className="main__list">
           <li className="main__item">
@@ -41,7 +25,7 @@ const StatisticsScreen = (props) => {
         </ul>
       </nav>
       <section className="main__profile main__profile--width">
-        <button onClick={onButtonClickArrow} className="main__arrow" type="button" aria-label="toggle"></button>
+        <button onClick={buttonClickArrowHandler} className="main__arrow" type="button" aria-label="toggle"></button>
         <h2 className="main__text">Статистика</h2>
       </section>
     </main>
@@ -50,7 +34,9 @@ const StatisticsScreen = (props) => {
 
 StatisticsScreen.propTypes = {
   onButtonClickProfile: PropTypes.func.isRequired,
-  onButtonClickTask: PropTypes.func.isRequired
+  onButtonClickTask: PropTypes.func.isRequired,
+  buttonClickMenuHandler: PropTypes.func.isRequired,
+  buttonClickArrowHandler: PropTypes.func.isRequired
 }
 
 export default StatisticsScreen;

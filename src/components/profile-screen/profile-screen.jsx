@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ProfileScreen = (props) => {
-  const {onButtonClickTask, onButtonClickStatistics} = props;
+  const {onButtonClickTask, onButtonClickStatistics, buttonClickMenuHandler, buttonClickArrowHandler} = props;
 
   const onSubmitClick = (evt) => {
     evt.preventDefault();
@@ -28,28 +28,10 @@ const ProfileScreen = (props) => {
     }
   };
 
-  const onButtonClickMenu = () => {
-    const button = document.querySelector(".main__btn");
-    const list = document.querySelector(".main__list");
-    button.classList.toggle("main__btn--open");
-    list.classList.toggle("main__list--display");
-  }
-  
-  const onButtonClickArrow = () => {
-    const button = document.querySelector(".main__arrow");
-    const nav = document.querySelector(".main__nav");
-    const list = document.querySelector(".main__list");
-    const form = document.querySelector(".main__form");
-    button.classList.toggle("main__arrow--close");
-    nav.classList.toggle("main__nav--width");
-    list.classList.toggle("main__list--display");
-    form.classList.toggle("main__form--width");
-  }
-
   return (
     <main className="main">
       <nav className="main__nav">
-        <button onClick={onButtonClickMenu} className="main__btn" type="button" aria-label="toggle"></button>
+        <button onClick={buttonClickMenuHandler} className="main__btn" type="button" aria-label="toggle"></button>
         <img className="main__img" src="img/svg/logo.svg" alt="Logo"/>
         <ul className="main__list">
           <li className="main__item">
@@ -67,7 +49,7 @@ const ProfileScreen = (props) => {
         </ul>
       </nav>
       <section className="main__profile">
-        <button onClick={onButtonClickArrow} className="main__arrow" type="button" aria-label="toggle"></button>
+        <button onClick={buttonClickArrowHandler} className="main__arrow" type="button" aria-label="toggle"></button>
         <h2 className="main__text">Мой профиль</h2>
         <form onSubmit={onSubmitClick} className="main__form">
           <div className="main__wrapper">
@@ -95,7 +77,9 @@ const ProfileScreen = (props) => {
 
 ProfileScreen.propTypes = {
   onButtonClickTask: PropTypes.func.isRequired,
-  onButtonClickStatistics: PropTypes.func.isRequired
+  onButtonClickStatistics: PropTypes.func.isRequired,
+  buttonClickMenuHandler: PropTypes.func.isRequired,
+  buttonClickArrowHandler: PropTypes.func.isRequired
 }
 
 export default ProfileScreen;
