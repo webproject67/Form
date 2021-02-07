@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render ProfileScreen 1`] = `
+<main
+  className="main"
+>
+  <nav
+    className="main__nav"
+  >
+    <button
+      aria-label="toggle"
+      className="main__btn"
+      onClick={[Function]}
+      type="button"
+    />
+    <img
+      alt="Logo"
+      className="main__img"
+      src="img/svg/logo.svg"
+    />
+    <ul
+      className="main__list"
+    >
+      <li
+        className="main__item"
+      >
+        <img
+          alt="Logo"
+          className="main__image"
+          src="img/svg/profile.svg"
+        />
+        <a
+          className="main__link main__link--active"
+        >
+          Мой профиль
+        </a>
+      </li>
+      <li
+        className="main__item"
+      >
+        <img
+          alt="Logo"
+          className="main__image"
+          src="img/svg/task.svg"
+        />
+        <a
+          className="main__link"
+          onClick={[Function]}
+        >
+          Список задач
+        </a>
+      </li>
+      <li
+        className="main__item"
+      >
+        <img
+          alt="Logo"
+          className="main__image"
+          src="img/svg/statistics.svg"
+        />
+        <a
+          className="main__link"
+          onClick={[Function]}
+        >
+          Статистика
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="main__profile"
+  >
+    <button
+      aria-label="toggle"
+      className="main__arrow"
+      onClick={[Function]}
+      type="button"
+    />
+    <h2
+      className="main__text"
+    >
+      Мой профиль
+    </h2>
+    <form
+      className="main__form"
+      onSubmit={[Function]}
+    >
+      <div
+        className="main__wrapper"
+      >
+        <div
+          className="main__data"
+        >
+          <label
+            htmlFor="name"
+          >
+            Имя
+          </label>
+          <input
+            className="main__name"
+            id="name"
+            name="name"
+            type="text"
+          />
+          <p
+            className="main__text-error"
+          >
+            Пожалуйста заполните поле
+          </p>
+          <label
+            htmlFor="surname"
+          >
+            Фамилия
+          </label>
+          <input
+            className="main__surname"
+            id="surname"
+            name="surname"
+            type="text"
+          />
+          <p
+            className="main__text-error"
+          >
+            Пожалуйста заполните поле
+          </p>
+        </div>
+        <div
+          className="main__change"
+        >
+          <label
+            htmlFor="password"
+          >
+            Сменить пароль
+          </label>
+          <input
+            className="main__password"
+            id="password"
+            name="password"
+            type="text"
+          />
+          <label
+            htmlFor="login"
+          >
+            Сменить логин
+          </label>
+          <input
+            className="main__login"
+            id="login"
+            name="login"
+            type="text"
+          />
+        </div>
+      </div>
+      <input
+        className="main__submit"
+        type="submit"
+        value="Сохранить"
+      />
+    </form>
+  </section>
+</main>
+`;

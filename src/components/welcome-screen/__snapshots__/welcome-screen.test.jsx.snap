@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render WelcomeScreen 1`] = `
+<main
+  className="page-main"
+>
+  <h1
+    className="visually-hidden"
+  >
+    DANCECOLOR
+  </h1>
+  <form
+    className="page-main__form"
+    onSubmit={[Function]}
+  >
+    <img
+      alt="Logo"
+      className="page-main__img"
+      src="img/svg/logo.svg"
+    />
+    <input
+      className="page-main__text"
+      name="login"
+      placeholder="Логин"
+      type="text"
+    />
+    <input
+      className="page-main__password"
+      name="password"
+      placeholder="Пароль"
+      type="password"
+    />
+    <input
+      className="page-main__submit"
+      type="submit"
+      value="Войти"
+    />
+  </form>
+</main>
+`;

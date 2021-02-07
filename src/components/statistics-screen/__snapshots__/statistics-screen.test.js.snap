@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render StatisticsScreen 1`] = `
+<main
+  className="main"
+>
+  <nav
+    className="main__nav"
+  >
+    <button
+      aria-label="toggle"
+      className="main__btn"
+      onClick={[Function]}
+      type="button"
+    />
+    <img
+      alt="Logo"
+      className="main__img"
+      src="img/svg/logo.svg"
+    />
+    <ul
+      className="main__list"
+    >
+      <li
+        className="main__item"
+      >
+        <img
+          alt="Logo"
+          className="main__image"
+          src="img/svg/profile.svg"
+        />
+        <a
+          className="main__link"
+          onClick={[Function]}
+        >
+          Мой профиль
+        </a>
+      </li>
+      <li
+        className="main__item"
+      >
+        <img
+          alt="Logo"
+          className="main__image"
+          src="img/svg/task.svg"
+        />
+        <a
+          className="main__link"
+          onClick={[Function]}
+        >
+          Список задач
+        </a>
+      </li>
+      <li
+        className="main__item"
+      >
+        <img
+          alt="Logo"
+          className="main__image"
+          src="img/svg/statistics.svg"
+        />
+        <a
+          className="main__link main__link--active"
+        >
+          Статистика
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="main__profile main__profile--width"
+  >
+    <button
+      aria-label="toggle"
+      className="main__arrow"
+      onClick={[Function]}
+      type="button"
+    />
+    <h2
+      className="main__text"
+    >
+      Статистика
+    </h2>
+  </section>
+</main>
+`;
