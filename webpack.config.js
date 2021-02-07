@@ -89,7 +89,18 @@ module.exports = {
           extract: true,
           spriteFilename: 'img/svg/sprite.svg'
         }
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
       }
     ]
-  }
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
+  devtool: 'source-map'
 }
