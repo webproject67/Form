@@ -27,6 +27,7 @@
     width: 20px;
     height: 2px;
     background: #BD0D22;
+  	transition: all 0.4s ease;
   }
 
   &::before {
@@ -36,17 +37,17 @@
   &::after {
     top: 14px;
   }
-}
 
-.main__btn--open {
-  &::before {
-    top: 10px;
-    transform: rotate(45deg);
-  }
-  
-  &::after {
-    top: 10px;
-    transform: rotate(-45deg);
+  &--open {
+    &::before {
+      top: 10px;
+      transform: rotate(45deg);
+    }
+    
+    &::after {
+      top: 10px;
+      transform: rotate(-45deg);
+    }
   }
 }
 
@@ -60,6 +61,10 @@
   list-style: none;
   text-align: start;
   background: #E5E5E5;
+
+  &--display {
+    display: block;
+  }
 }
 
 .main__item {
@@ -90,6 +95,7 @@
 
 .main__profile {
   margin: 24px 16px 0;
+  height: 100vh;
 }
 
 .main__text {

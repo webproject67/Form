@@ -24,11 +24,18 @@ const ProfileScreen = (props) => {
       textError[1].classList.remove("main__text-error--opacity");
       surname.classList.remove("main__name--border");
       submit.classList.add("main__submit--width");
-      submit.value = 'Спасибо! Форма отправлена успешно!'
+      submit.value = 'Спасибо! Форма отправлена!'
     }
   };
+
+  const onButtonClickMenu = () => {
+    const button = document.querySelector(".main__btn");
+    const list = document.querySelector(".main__list");
+    button.classList.toggle("main__btn--open");
+    list.classList.toggle("main__list--display");
+  }
   
-  const onButtonClick = () => {
+  const onButtonClickArrow = () => {
     const button = document.querySelector(".main__arrow");
     const nav = document.querySelector(".main__nav");
     const list = document.querySelector(".main__list");
@@ -42,7 +49,7 @@ const ProfileScreen = (props) => {
   return (
     <main className="main">
       <nav className="main__nav">
-        <button className="main__btn" type="button" aria-label="toggle"></button>
+        <button onClick={onButtonClickMenu} className="main__btn" type="button" aria-label="toggle"></button>
         <img className="main__img" src="img/svg/logo.svg" alt="Logo"/>
         <ul className="main__list">
           <li className="main__item">
@@ -60,7 +67,7 @@ const ProfileScreen = (props) => {
         </ul>
       </nav>
       <section className="main__profile">
-        <button onClick={onButtonClick} className="main__arrow" type="button" aria-label="toggle"></button>
+        <button onClick={onButtonClickArrow} className="main__arrow" type="button" aria-label="toggle"></button>
         <h2 className="main__text">Мой профиль</h2>
         <form onSubmit={onSubmitClick} className="main__form">
           <div className="main__wrapper">
