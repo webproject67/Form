@@ -4,6 +4,15 @@ import PropTypes from "prop-types";
 const TaskScreen = (props) => {
   const {onButtonClickProfile, onButtonClickStatistics} = props;
 
+  const onButtonClick = () => {
+    const button = document.querySelector(".main__arrow");
+    const nav = document.querySelector(".main__nav");
+    const list = document.querySelector(".main__list");
+    button.classList.toggle("main__arrow--close");
+    nav.classList.toggle("main__nav--width");
+    list.classList.toggle("main__list--display");
+  }
+
   return (
     <main className="main">
       <nav className="main__nav">
@@ -23,9 +32,9 @@ const TaskScreen = (props) => {
             <a onClick={onButtonClickStatistics} className="main__link">Статистика</a>
           </li>
         </ul>
-        <button className="main__arrow" type="button" aria-label="toggle"></button>
       </nav>
-      <section className="main__profile">
+      <section className="main__profile main__profile--width">
+        <button onClick={onButtonClick} className="main__arrow" type="button" aria-label="toggle"></button>
         <h2 className="main__text">Список задач</h2>
       </section>
     </main>

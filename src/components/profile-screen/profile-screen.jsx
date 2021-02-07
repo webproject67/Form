@@ -3,6 +3,17 @@ import PropTypes from "prop-types";
 
 const ProfileScreen = (props) => {
   const {onButtonClickTask, onButtonClickStatistics} = props;
+  
+  const onButtonClick = () => {
+    const button = document.querySelector(".main__arrow");
+    const nav = document.querySelector(".main__nav");
+    const list = document.querySelector(".main__list");
+    const form = document.querySelector(".main__form");
+    button.classList.toggle("main__arrow--close");
+    nav.classList.toggle("main__nav--width");
+    list.classList.toggle("main__list--display");
+    form.classList.toggle("main__form--width");
+  }
 
   return (
     <main className="main">
@@ -23,9 +34,9 @@ const ProfileScreen = (props) => {
             <a onClick={onButtonClickStatistics} className="main__link">Статистика</a>
           </li>
         </ul>
-        <button className="main__arrow" type="button" aria-label="toggle"></button>
       </nav>
       <section className="main__profile">
+        <button onClick={onButtonClick} className="main__arrow" type="button" aria-label="toggle"></button>
         <h2 className="main__text">Мой профиль</h2>
         <form className="main__form">
           <div className="main__wrapper">
